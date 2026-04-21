@@ -1,1 +1,80 @@
-
+[
+  {
+    "id": 1,
+    "name": "Floral Printed Cotton Kurti",
+    "category": "Kurtis",
+    "meesho_price": 299,
+    "your_price": 449,
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Red", "Blue", "Green"],
+    "image": "https://images.meesho.com/images/products/placeholder1.jpg",
+    "description": "Beautiful floral printed cotton kurti perfect for daily wear. Soft fabric, comfortable fit.",
+    "meesho_link": "https://meesho.com",
+    "in_stock": true
+  },
+  {
+    "id": 2,
+    "name": "Embroidered Anarkali Suit",
+    "category": "Suits",
+    "meesho_price": 499,
+    "your_price": 749,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Yellow", "Pink", "Purple"],
+    "image": "https://images.meesho.com/images/products/placeholder2.jpg",
+    "description": "Gorgeous embroidered anarkali suit with dupatta. Ideal for festivals and special occasions.",
+    "meesho_link": "https://meesho.com",
+    "in_stock": true
+  },
+  {
+    "id": 3,
+    "name": "Rayon Straight Kurti",
+    "category": "Kurtis",
+    "meesho_price": 249,
+    "your_price": 374,
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["White", "Black", "Navy"],
+    "image": "https://images.meesho.com/images/products/placeholder3.jpg",
+    "description": "Elegant rayon straight kurti with minimal print. Goes well with palazzo or jeans.",
+    "meesho_link": "https://meesho.com",
+    "in_stock": true
+  },
+  {
+    "id": 4,
+    "name": "Saree with Blouse Piece",
+    "category": "Sarees",
+    "meesho_price": 399,
+    "your_price": 599,
+    "sizes": ["Free Size"],
+    "colors": ["Red", "Blue", "Green", "Pink"],
+    "image": "https://images.meesho.com/images/products/placeholder4.jpg",
+    "description": "Beautiful silk-blend saree with matching blouse piece. Perfect for weddings and functions.",
+    "meesho_link": "https://meesho.com",
+    "in_stock": true
+  },
+  {
+    "id": 5,
+    "name": "Palazzo Set with Kurti",
+    "category": "Sets",
+    "meesho_price": 349,
+    "your_price": 524,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Orange", "Teal", "Maroon"],
+    "image": "https://images.meesho.com/images/products/placeholder5.jpg",
+    "description": "Trendy palazzo set with printed kurti. Comfortable and stylish for all occasions.",
+    "meesho_link": "https://meesho.com",
+    "in_stock": true
+  },
+  {
+    "id": 6,
+    "name": "Casual Printed Top",
+    "category": "Tops",
+    "meesho_price": 199,
+    "your_price": 299,
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Pink", "White", "Blue"],
+    "image": "https://images.meesho.com/images/products/placeholder6.jpg",
+    "description": "Casual everyday top with fun print. Pair with jeans or skirts for a chic look.",
+    "meesho_link": "https://meesho.com",
+    "in_stock": true
+  }
+]
