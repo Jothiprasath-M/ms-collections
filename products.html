@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Products — MS Collections</title>
+  <meta name="description" content="Browse our full collection of Indian dresses, kurtis, sarees and suits. All at affordable prices with fast delivery.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">MS <span>Collections</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="products.html" class="cart-btn">Shop Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div style="background:#2d1b0e;padding:32px 20px;text-align:center;color:white">
+  <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;margin-bottom:6px">Our Collection</div>
+  <div style="font-size:14px;opacity:0.7">Fresh picks, curated just for you</div>
+</div>
+
+<div class="container" style="padding-top:32px">
+
+  <!-- ADSENSE TOP -->
+  <div class="ad-slot ad-slot-banner">Advertisement</div>
+
+  <!-- FILTERS -->
+  <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin:24px 0">
+    <div class="categories" id="category-filters">
+      <button class="cat-btn active" onclick="filterProducts('All', this)">All</button>
+      <button class="cat-btn" onclick="filterProducts('Kurtis', this)">Kurtis</button>
+      <button class="cat-btn" onclick="filterProducts('Sarees', this)">Sarees</button>
+      <button class="cat-btn" onclick="filterProducts('Suits', this)">Suits</button>
+      <button class="cat-btn" onclick="filterProducts('Sets', this)">Sets</button>
+      <button class="cat-btn" onclick="filterProducts('Tops', this)">Tops</button>
+    </div>
+    <select onchange="sortProducts(this.value)" style="border:1.5px solid #e8ddd4;background:#fff;padding:8px 14px;border-radius:20px;font-family:inherit;font-size:13px;color:#2d1b0e;cursor:pointer">
+      <option value="default">Sort by: Default</option>
+      <option value="price-low">Price: Low to High</option>
+      <option value="price-high">Price: High to Low</option>
+      <option value="name">Name: A-Z</option>
+    </select>
+  </div>
+
+  <div style="font-size:13px;color:#a89080;margin-bottom:16px" id="product-count"></div>
+
+  <!-- PRODUCTS GRID -->
+  <div class="products-grid" id="all-products"></div>
+
+  <!-- ADSENSE BOTTOM -->
+  <div class="ad-slot ad-slot-banner" style="margin-top:40px">Advertisement</div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">MS <span>Collections</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <p style="margin-top:16px;font-size:12px;opacity:0.5">&copy; 2025 MS Collections</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Check for category param in URL
+  window.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('cat');
+    if (cat) {
+      document.querySelectorAll('.cat-btn').forEach(b => {
+        if (b.textContent === cat) { filterProducts(cat, b); }
+      });
+    }
+  });
+</script>
+</body>
+</html>

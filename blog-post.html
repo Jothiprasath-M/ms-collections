@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — MS Collections</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .article-body { font-size:15px; line-height:1.8; color:#444; max-width:680px; }
+    .article-body strong { color:#2d1b0e; }
+    .article-body br { margin-bottom:8px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">MS <span>Collections</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Shop</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="products.html" class="cart-btn">Shop Now</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container" style="padding-top:24px;padding-bottom:60px">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo;
+    <a href="blog.html">Blog</a> &rsaquo;
+    <span id="breadcrumb-title">Article</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 300px;gap:40px;margin-top:24px" id="blog-layout">
+
+    <!-- ARTICLE -->
+    <div>
+      <div id="article-content">Loading...</div>
+
+      <!-- ADSENSE AFTER ARTICLE -->
+      <div class="ad-slot" style="height:280px;line-height:260px;margin-top:32px">Advertisement</div>
+
+      <!-- RELATED PRODUCTS CTA -->
+      <div style="background:#2d1b0e;border-radius:12px;padding:28px;text-align:center;margin-top:32px;color:white">
+        <div style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;margin-bottom:8px">Shop These Looks</div>
+        <div style="font-size:13px;opacity:0.7;margin-bottom:16px">All products mentioned in this article are available in our shop.</div>
+        <a href="products.html" class="btn-primary">Browse Collection →</a>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div>
+      <!-- ADSENSE SIDEBAR -->
+      <div class="ad-slot ad-slot-square" style="margin-bottom:24px">Advertisement</div>
+
+      <!-- RECENT POSTS -->
+      <div style="background:#fff;border:1px solid #e8ddd4;border-radius:12px;padding:20px">
+        <div style="font-weight:700;margin-bottom:16px;font-size:14px">Recent Articles</div>
+        <div id="recent-posts"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">MS <span>Collections</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <p style="margin-top:16px;font-size:12px;opacity:0.5">&copy; 2025 MS Collections</p>
+</footer>
+
+<!-- Mobile: stack layout -->
+<style>
+@media (max-width: 768px) {
+  #blog-layout { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product — MS Collections</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">MS <span>Collections</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Shop</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="products.html" class="cart-btn">Shop Now</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo;
+    <a href="products.html">Shop</a> &rsaquo;
+    <span id="breadcrumb-name">Product</span>
+  </div>
+
+  <div class="product-detail-grid" id="product-detail">
+    <!-- Loaded by JS -->
+  </div>
+
+  <!-- ADSENSE -->
+  <div class="ad-slot ad-slot-banner">Advertisement</div>
+
+  <!-- SIMILAR PRODUCTS -->
+  <div style="margin:40px 0">
+    <div class="section-header" style="text-align:left">
+      <div class="section-tag">You may also like</div>
+      <div class="section-title" style="font-size:24px">Similar Products</div>
+    </div>
+    <div class="products-grid" id="similar-products"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">MS <span>Collections</span></div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="products.html">Shop</a>
+    <a href="blog.html">Blog</a>
+    <a href="about.html">About</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </div>
+  <p style="margin-top:16px;font-size:12px;opacity:0.5">&copy; 2025 MS Collections</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+let selectedSize = '';
+let selectedColor = '';
+
+function selectSize(size, el) {
+  selectedSize = size;
+  document.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function selectColor(color, el) {
+  selectedColor = color;
+  document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function buyNow(product) {
+  if (!selectedSize && product.sizes[0] !== 'Free Size') {
+    alert('Please select a size first!');
+    return;
+  }
+  if (!selectedSize) selectedSize = 'Free Size';
+  if (!selectedColor) selectedColor = product.colors[0];
+
+  const orderData = {
+    productId: product.id,
+    productName: product.name,
+    size: selectedSize,
+    color: selectedColor,
+    price: product.your_price
+  };
+  localStorage.setItem('pendingOrder', JSON.stringify(orderData));
+  window.location.href = 'order.html';
+}
+</script>
+</body>
+</html>
