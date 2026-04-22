@@ -79,10 +79,7 @@ function selectColor(color, el) {
 }
 
 function buyNow(product) {
-  if (!selectedSize && product.sizes[0] !== 'Free Size') {
-    alert('Please select a size first!');
-    return;
-  }
+  
   if (!selectedSize) selectedSize = 'Free Size';
   if (!selectedColor) selectedColor = product.colors[0];
 
