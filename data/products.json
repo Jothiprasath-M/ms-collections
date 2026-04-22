@@ -253,5 +253,35 @@
     "rating": 4.0,
     "inStock": true,
     "meesho_link": "https://www.meesho.com/s/p/91u0eo?utm_source=s_cc"
+  },
+  {
+   "id": 18,
+    "name": "Khushi Collection Beautiful Flower Printed and Embroidery Kurta With Dupatta and Pant",
+    "category": "Sets",
+    "meesho_price": 711,
+    "your_price": 1070,
+    "image": "https://images.meesho.com/images/products/327716644/ei0xb_512.avif?width=512",
+    "sizes": ["S", "M", "L", "XL", "XXL","XXXL","XXXXL","XXXXXL","XXXXXXL"],
+    "colors": ["Pink"],
+    "description": "Pack Of 1",
+    "fabric": "Rayon",
+    "rating": 4.0,
+    "inStock": true,
+    "meesho_link": "https://www.meesho.com/s/p/8yp3lz?utm_source=s_cc"
+  },
+  {
+   "id": 19,
+    "name": "Trendy Floral Printed Short Kurti for Women - Pack of 3 | Designer Cotton Lightweight Daily Wear Kurti Tops",
+    "category": "Tops",
+    "meesho_price": 378,
+    "your_price": 650,
+    "image": "https://images.meesho.com/images/products/573209219/peqdp_512.avif?width=512",
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "colors": ["Pink","White","Blue"],
+    "description": "Pack Of 3",
+    "fabric": "Cotton Blend",
+    "rating": 4.0,
+    "inStock": true,
+    "meesho_link": "https://www.meesho.com/s/p/9h9v2b?utm_source=s_cc"
   }
 ]
