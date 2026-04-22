@@ -115,15 +115,13 @@ if (detailEl) {
     const allImages = [p.image, ...(p.images || [])].filter(Boolean);
 const imgHtml = allImages.length > 0 ? `
   <div style="width:100%">
-    <div style="width:100%;background:#f3ede6;border-radius:8px;display:flex;align-items:flex-start;justify-content:center">
-      <img id="main-img" src="${allImages[0]}" style="width:100%;height:auto;object-fit:none;display:block;border-radius:8px">
-    </div>
+    <img id="main-img" src="${allImages[0]}" style="width:100%;height:auto;display:block;border-radius:8px">
     <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
       ${allImages.map((img,i) => `
         <img src="${img}"
         onclick="document.getElementById('main-img').src='${img}';document.querySelectorAll('.thumb').forEach(t=>t.style.border='2px solid #e8ddd4');this.style.border='2px solid #c4622d'"
         class="thumb"
-        style="width:120px;height:auto;object-fit:none;background:#f3ede6;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
+        style="width:120px;height:auto;display:block;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
       `).join('')}
     </div>
   </div>` : `<span style="font-size:80px">${emoji[p.category]||'👗'}</span>`;
