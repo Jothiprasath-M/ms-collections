@@ -85,9 +85,11 @@
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('cat');
     if (cat) {
-      document.querySelectorAll('.cat-btn').forEach(b => {
-        if (b.textContent === cat) { filterProducts(cat, b); }
-      });
+      setTimeout(() => {
+        document.querySelectorAll('.cat-btn').forEach(b => {
+          if (b.textContent.trim() === cat) { filterProducts(cat, b); }
+        });
+      }, 300);
     }
   });
 </script>
