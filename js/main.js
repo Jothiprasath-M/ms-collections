@@ -114,12 +114,12 @@ if (detailEl) {
     const emoji = { Kurtis:'👗', Sarees:'🥻', Suits:'✨', Sets:'👚', Tops:'👕' };
     const allImages = [p.image, ...(p.images || [])].filter(Boolean);
 const imgHtml = allImages.length > 0 ? `
-  <div style="width:100%;height:100%">
-    <img id="main-img" src="${allImages[0]}" style="width:100%;height:500px;object-fit:cover;border-radius:8px">
-    <div style="display:flex;gap:8px;margin-top:8px;overflow-x:auto">
+  <div style="width:100%">
+    <img id="main-img" src="${allImages[0]}" style="width:100%;height:450px;object-fit:contain;border-radius:8px;background:#f3ede6">
+    <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
       ${allImages.map((img,i) => `
         <img src="${img}" onclick="document.getElementById('main-img').src='${img}'"
-        style="width:100px;height:100px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
+        style="width:90px;height:90px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
       `).join('')}
     </div>
   </div>` : `<span style="font-size:80px">${emoji[p.category]||'👗'}</span>`;
