@@ -112,19 +112,9 @@ if (detailEl) {
     document.getElementById('breadcrumb-name').textContent = p.name;
 
     const emoji = { Kurtis:'👗', Sarees:'🥻', Suits:'✨', Sets:'👚', Tops:'👕' };
-    const allImages = [p.image, ...(p.images || [])].filter(Boolean);
-const imgHtml = allImages.length > 0 ? `
-  <div style="width:100%">
-    <img id="main-img" src="${allImages[0]}" style="width:100%;height:auto;display:block;border-radius:8px">
-    <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-      ${allImages.map((img,i) => `
-        <img src="${img}"
-        onclick="document.getElementById('main-img').src='${img}';document.querySelectorAll('.thumb').forEach(t=>t.style.border='2px solid #e8ddd4');this.style.border='2px solid #c4622d'"
-        class="thumb"
-        style="width:120px;height:auto;display:block;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
-      `).join('')}
-    </div>
-  </div>` : `<span style="font-size:80px">${emoji[p.category]||'👗'}</span>`;
+    const imgHtml = p.image 
+  ? `<img src="${p.image}" style="width:100%;height:auto;display:block;border-radius:8px">`
+  : `<span style="font-size:80px">${emoji[p.category]||'👗'}</span>`;
 
     const sizeBtns = p.sizes.map((s, i) =>
       `<button class="size-btn${i===0?' selected':''}" onclick="selectSize('${s}',this)">${s}</button>`
