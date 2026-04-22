@@ -115,11 +115,11 @@ if (detailEl) {
     const allImages = [p.image, ...(p.images || [])].filter(Boolean);
 const imgHtml = allImages.length > 0 ? `
   <div style="width:100%;height:100%">
-    <img id="main-img" src="${allImages[0]}" style="width:100%;height:340px;object-fit:cover;border-radius:8px">
+    <img id="main-img" src="${allImages[0]}" style="width:100%;height:500px;object-fit:cover;border-radius:8px">
     <div style="display:flex;gap:8px;margin-top:8px;overflow-x:auto">
       ${allImages.map((img,i) => `
         <img src="${img}" onclick="document.getElementById('main-img').src='${img}'"
-        style="width:70px;height:70px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
+        style="width:100px;height:100px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
       `).join('')}
     </div>
   </div>` : `<span style="font-size:80px">${emoji[p.category]||'👗'}</span>`;
