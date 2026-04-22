@@ -115,11 +115,15 @@ if (detailEl) {
     const allImages = [p.image, ...(p.images || [])].filter(Boolean);
 const imgHtml = allImages.length > 0 ? `
   <div style="width:100%">
-    <img id="main-img" src="${allImages[0]}" style="width:100%;height:100%;object-fit:contain;border-radius:8px;background:#f3ede6">
+    <div style="width:100%;background:#f3ede6;border-radius:8px;display:flex;align-items:center;justify-content:center;min-height:350px">
+      <img id="main-img" src="${allImages[0]}" style="width:100%;height:auto;max-height:500px;object-fit:contain;display:block;border-radius:8px">
+    </div>
     <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
       ${allImages.map((img,i) => `
-        <img src="${img}" onclick="document.getElementById('main-img').src='${img}'"
-        style="width:100px;height:200px;object-fit:cover;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
+        <img src="${img}"
+        onclick="document.getElementById('main-img').src='${img}';document.querySelectorAll('.thumb').forEach(t=>t.style.border='2px solid #e8ddd4');this.style.border='2px solid #c4622d'"
+        class="thumb"
+        style="width:120px;height:120px;object-fit:contain;background:#f3ede6;border-radius:6px;cursor:pointer;border:2px solid ${i===0?'#c4622d':'#e8ddd4'}">
       `).join('')}
     </div>
   </div>` : `<span style="font-size:80px">${emoji[p.category]||'👗'}</span>`;
