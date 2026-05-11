@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://jothiprasath-m.github.io/ms-collections/sitemap.xml
