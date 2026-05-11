@@ -109,6 +109,7 @@ if (detailEl) {
     if (!p) { detailEl.innerHTML = '<p>Product not found.</p>'; return; }
 
     document.title = `${p.name} — MS Collections`;
+    document.querySelector('meta[name="description"]') && (document.querySelector('meta[name="description"]').content = `Buy ${p.name} at ₹${p.your_price}. ${p.category} available in multiple sizes and colors. Fast delivery across India — MS Collections.`);
     document.getElementById('breadcrumb-name').textContent = p.name;
 
     const emoji = { Kurtis:'👗', Sarees:'🥻', Suits:'✨', Sets:'👚', Tops:'👕' };
@@ -182,6 +183,7 @@ if (articleEl) {
     if (!b) { articleEl.innerHTML = '<p>Article not found.</p>'; return; }
 
     document.title = `${b.title} — MS Collections`;
+    document.querySelector('meta[name="description"]') && (document.querySelector('meta[name="description"]').content = b.excerpt);
     document.getElementById('breadcrumb-title').textContent = b.title;
     const date = new Date(b.date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' });
 
